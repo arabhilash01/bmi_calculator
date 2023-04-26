@@ -102,11 +102,11 @@ void _calculateBMI(WidgetRef ref, int weight, int height, int age, Gender gender
   double bmi = 0;
   double heightInMeters = height / 100.0;
   bmi = (weight / (heightInMeters * heightInMeters));
-  // if (gender == Gender.male) {
-  //   bmi = 88.36 + (13.4 * weight) + (4.8 * heightInMeters) - (5.7 * age);
-  // } else {
-  //   bmi = 447.6 + (9.2 * weight) + (3.1 * heightInMeters) - (4.3 * age);
-  // }
+  if (gender == Gender.male) {
+    bmi = 88.36 + (13.4 * weight) + (4.8 * heightInMeters) - (5.7 * age);
+  } else {
+    bmi = 447.6 + (9.2 * weight) + (3.1 * heightInMeters) - (4.3 * age);
+  }
 
   print(bmi);
 
